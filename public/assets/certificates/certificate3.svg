@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1000" width="1500" height="1000">
+  <rect width="1500" height="1000" fill="#FFFDF8"/>
+  <rect x="30" y="30" width="1440" height="940" fill="none" stroke="#12403F" stroke-width="14"/>
+  <rect x="58" y="58" width="1384" height="884" fill="none" stroke="#F59E0B" stroke-width="3"/>
+  <path d="M30 30h220L30 250z" fill="#12403F"/>
+  <path d="M1470 970h-220l220-220z" fill="#12403F"/>
+  <path d="M30 30h140L30 170z" fill="#F59E0B" opacity="0.9"/>
+  <path d="M1470 970h-140l140-140z" fill="#F59E0B" opacity="0.9"/>
+
+  <g transform="translate(690 110)">
+    <rect width="120" height="120" rx="26" fill="#12403F"/>
+    <g transform="translate(24 24) scale(3)" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/>
+      <path d="M22 10v6"/>
+      <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>
+    </g>
+  </g>
+  <text x="750" y="285" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8" fill="#12403F">DIGITAL SKILLS ACADEMY</text>
+
+  <text x="750" y="390" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700" letter-spacing="6" fill="#12403F">CERTIFICATE</text>
+  <text x="750" y="440" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="26" letter-spacing="10" fill="#F59E0B">OF COMPLETION</text>
+
+  <text x="750" y="520" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" fill="#475569">This is to certify that</text>
+  <text x="750" y="600" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-style="italic" fill="#0F172A">Learner Name</text>
+  <line x1="470" y1="625" x2="1030" y2="625" stroke="#F59E0B" stroke-width="2"/>
+  <text x="750" y="685" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" fill="#475569">has successfully completed the online course</text>
+  <rect x="450" y="712" width="600" height="64" rx="32" fill="#D5F2EF"/>
+  <text x="750" y="755" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="32" font-weight="700" fill="#12403F">Master in ChatGPT</text>
+
+  <text x="300" y="855" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" fill="#475569">Date: ____________</text>
+  <line x1="180" y1="870" x2="420" y2="870" stroke="#94A3B8" stroke-width="1.5"/>
+
+  <circle cx="750" cy="850" r="58" fill="#F59E0B"/>
+  <circle cx="750" cy="850" r="46" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 5"/>
+  <text x="750" y="845" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#fff" letter-spacing="1.5">CERTIFIED</text>
+  <text x="750" y="868" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#fff" letter-spacing="1.5">COMPLETION</text>
+
+  <text x="1130" y="835" text-anchor="middle" font-family="'Snell Roundhand', 'Brush Script MT', cursive" font-size="44" fill="#12403F">Varun Sareen</text>
+  <line x1="1010" y1="855" x2="1250" y2="855" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="1130" y="885" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" fill="#475569">Varun Sareen, Founder</text>
+
+  <text x="750" y="560" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="230" font-weight="800" fill="#12403F" opacity="0.05" transform="rotate(-18 750 560)">SAMPLE</text>
+</svg>

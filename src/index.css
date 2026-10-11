@@ -1,0 +1,259 @@
+/* =====================================================================
+   Digital Skills Academy — global styles
+   Most styling is done with Tailwind classes inside the components.
+   This file holds the shared classes used across many components.
+   Brand colours live in tailwind.config.ts.
+   ===================================================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-white font-sans text-slate-700 antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-brand-950;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 3px solid theme('colors.accent.500');
+    outline-offset: 3px;
+    border-radius: 0.5rem;
+  }
+
+  ::selection {
+    @apply bg-accent-200 text-brand-950;
+  }
+
+  /* Stops single-column grids from becoming wider than small phone screens. */
+  [class~='grid'] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* ---------- Layout ---------- */
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  /* ---------- Headings ---------- */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-accent-200 bg-accent-50 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.14em] text-accent-700;
+  }
+
+  .section-title {
+    @apply mt-4 text-3xl font-extrabold leading-[1.2] tracking-tight text-brand-950 sm:text-4xl lg:text-[2.75rem];
+  }
+
+  .section-lead {
+    @apply mt-4 text-base leading-[1.65] text-slate-600 sm:text-lg;
+  }
+
+  .text-gradient {
+    background-image: linear-gradient(to right, #144e4c, #167873, #b45309);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl px-5 py-3 text-[0.9375rem] font-bold leading-none no-underline transition-all duration-200 hover:-translate-y-0.5 disabled:translate-y-0 disabled:cursor-not-allowed disabled:opacity-70;
+  }
+  .btn-sm {
+    @apply px-4 py-2.5 text-sm;
+  }
+  .btn-lg {
+    @apply px-6 py-4 text-base;
+  }
+  .btn-primary {
+    @apply bg-accent-500 text-brand-950 shadow-[0_8px_20px_-8px_rgba(245,158,11,0.7)] hover:bg-accent-400;
+  }
+  .btn-secondary {
+    @apply bg-brand-900 text-white shadow-[0_8px_20px_-10px_rgba(7,38,37,0.7)] hover:bg-brand-800;
+  }
+  .btn-outline {
+    @apply border border-slate-300 bg-white text-brand-900 hover:translate-y-0 hover:border-brand-900 hover:bg-brand-50;
+  }
+  .btn-white {
+    @apply bg-white text-brand-950 hover:bg-brand-50;
+  }
+  .btn-ghost-light {
+    @apply border border-white/30 bg-white/5 text-white hover:translate-y-0 hover:border-white hover:bg-white/10;
+  }
+  .btn-whatsapp {
+    @apply bg-green-700 text-white hover:bg-green-800;
+  }
+
+  /* ---------- Cards, chips, badges ---------- */
+  .card {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-soft;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-lift;
+  }
+  .icon-tile {
+    @apply inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold;
+  }
+
+  /* ---------- Lists & notices ---------- */
+  .check-list > li {
+    @apply flex gap-3 leading-[1.65];
+  }
+  .check-list > li + li {
+    @apply mt-3;
+  }
+  .notice {
+    @apply flex gap-3 rounded-2xl border px-5 py-4 text-sm leading-[1.65];
+  }
+  .notice-info {
+    @apply border-brand-200 bg-brand-50 text-brand-900;
+  }
+  .notice-warn {
+    @apply border-accent-200 bg-accent-50 text-accent-950;
+  }
+
+  /* ---------- Navigation ---------- */
+  .nav-link {
+    @apply rounded-lg px-2.5 py-2 text-[0.9375rem] font-semibold text-slate-700 transition-all duration-200 hover:bg-brand-50 hover:text-brand-900 aria-[current=page]:bg-brand-50 aria-[current=page]:text-brand-900 xl:px-3.5;
+  }
+  .mobile-nav-link {
+    @apply flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold text-slate-800 hover:bg-brand-50 hover:text-brand-900 aria-[current=page]:bg-brand-50 aria-[current=page]:text-brand-900;
+  }
+  .footer-link {
+    @apply text-sm text-brand-100/80 transition-colors duration-200 hover:text-white;
+  }
+
+  /* ---------- Forms ---------- */
+  .field-label {
+    @apply mb-1.5 block text-sm font-semibold text-brand-950;
+  }
+  .field-input {
+    @apply block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 shadow-sm transition placeholder:text-slate-400 hover:border-slate-400 focus:border-brand-500 focus:outline-none focus:ring-4 focus:ring-brand-100 aria-[invalid=true]:border-red-500 aria-[invalid=true]:focus:ring-red-100;
+  }
+  select.field-input {
+    appearance: none;
+    padding-right: 2.75rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231B2852' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    background-size: 1.15rem;
+  }
+  .field-error {
+    @apply mt-1.5 text-sm font-medium text-red-700;
+  }
+  .field-hint {
+    @apply mt-1.5 text-xs text-slate-500;
+  }
+
+  /* ---------- Expand / collapse (FAQ answers and mobile menu) ---------- */
+  .collapse-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition:
+      grid-template-rows 0.3s ease,
+      visibility 0s linear 0.3s;
+  }
+  .collapse-panel[data-open='true'] {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    transition:
+      grid-template-rows 0.3s ease,
+      visibility 0s linear 0s;
+  }
+  .collapse-panel > * {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  /* ---------- Decorative backgrounds ---------- */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(18, 64, 63, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(18, 64, 63, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent);
+    mask-image: linear-gradient(to bottom, #000 40%, transparent);
+  }
+
+  /* ---------- Certificate carousel ---------- */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel-btn {
+    @apply inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition enabled:hover:bg-white/20 disabled:cursor-not-allowed disabled:opacity-35;
+  }
+  .carousel-btn:focus-visible {
+    outline-color: theme('colors.orange.300');
+    outline-offset: 2px;
+  }
+
+  /* ---------- Certificate image viewer ---------- */
+  dialog.lightbox::backdrop {
+    background: rgba(7, 38, 37, 0.82);
+    backdrop-filter: blur(4px);
+  }
+
+  /* ---------- Legal pages ---------- */
+  .prose-legal {
+    @apply max-w-3xl text-base leading-[1.7] text-slate-700;
+  }
+  .prose-legal h2 {
+    @apply mb-3 mt-10 text-[1.375rem] font-extrabold text-brand-950;
+  }
+  .prose-legal p {
+    @apply mt-3;
+  }
+  .prose-legal ul {
+    @apply mt-3 list-disc pl-6;
+  }
+  .prose-legal li {
+    @apply mt-2 marker:text-accent-500;
+  }
+  .prose-legal a {
+    @apply font-semibold text-brand-700 underline decoration-accent-400 underline-offset-2;
+  }
+}

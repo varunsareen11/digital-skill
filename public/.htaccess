@@ -1,0 +1,8 @@
+# Send every page address (e.g. /about, /courses/video-editing) to index.html so the React app can show it.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
